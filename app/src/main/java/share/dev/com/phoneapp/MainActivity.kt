@@ -1,5 +1,6 @@
 package share.dev.com.phoneapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -16,6 +17,7 @@ import share.dev.com.phoneapp.Models.Photo
 import share.dev.com.phoneapp.Models.PhotoList
 import share.dev.com.phoneapp.adapters.PhotoAdapter
 import share.dev.com.phoneapp.api.PhotoRetriever
+import share.dev.com.phoneapp.views.DetailActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -69,7 +71,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             else -> super.onOptionsItemSelected(item)
         }
     }
-    override fun onClick(p0: View?) {
+    override fun onClick(view: View?) {
+
+        val intent = Intent(this,DetailActivity::class.java)
+        val holder = view?.tag as PhotoAdapter.PhotoViewHolder
+        intent.putExtra(DetailActivity.PHOTO,adapter?.getPhoto(holder.adapterPosition))
+        startActivity(intent)
 
     }
 }
