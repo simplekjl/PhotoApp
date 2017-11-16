@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">PhoneApp</string>
     <string name="action_settings">Settings</string>
+
+    <!-- ServerSide ApiKey -->
+    <string name="api_key">7064571-eb3700f13d46bc65950042a5f</string>
 </resources>
