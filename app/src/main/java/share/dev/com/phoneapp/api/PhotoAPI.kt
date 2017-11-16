@@ -9,6 +9,6 @@ import share.dev.com.phoneapp.Models.PhotoList
  */
 interface PhotoAPI {
 
-    @GET("?key=eb3700f13d46bc65950042a5f&q=nature&image_type=photo")
+    @GET("?key=7064571-eb3700f13d46bc65950042a5f&q=Mexico&image_type=photo")
     fun getPhotos() : Call<PhotoList>
 }

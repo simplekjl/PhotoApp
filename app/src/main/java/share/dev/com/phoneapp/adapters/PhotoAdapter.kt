@@ -53,10 +53,10 @@ class PhotoAdapter(var photos: List<Photo>,
             }
 
             itemView.tag =this
-            tags = itemView.findViewById<TextView>(R.id.tags)
-            likes = itemView.findViewById<TextView>(R.id.likes)
-            favorites = itemView.findViewById<TextView>(R.id.favorites)
-            image = itemView.findViewById<ImageView>(R.id.image)
+            tags = itemView.findViewById(R.id.tags)
+            likes = itemView.findViewById(R.id.likes)
+            favorites = itemView.findViewById(R.id.favorites)
+            image = itemView.findViewById(R.id.photo_item)
         }
     }
 
